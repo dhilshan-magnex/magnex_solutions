@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Magnex Solutions — Smart POS systems and business management software for restaurants and retail businesses in Sri Lanka."
+    />
+    <title>MagneX Solutions - Smart Software for Restaurants & Retail</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* ── INDEX-SPECIFIC STYLES ────────────────────────────────── */
+
+      /* Hero */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: calc(var(--nav-height) + 60px) 0 80px;
+      }
+
+      .hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .hero__orb1 {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(circle, #e0f8ff 0%, transparent 70%);
+        filter: blur(60px);
+      }
+
+      .hero__orb2 {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(circle, #e0f8ff, transparent 70%);
+        filter: blur(60px);
+      }
+
+      .hero__orb3 {
+        position: absolute;
+        bottom: 5%;
+        left: 40%;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(circle, #e0f8ff, transparent 70%);
+        filter: blur(50px);
+      }
+
+      /* Grid overlay */
+      .hero__grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(6, 182, 212, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(6, 182, 212, 0.06) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(
+          ellipse 80% 80% at 50% 50%,
+          black 0%,
+          transparent 100%
+        );
+      }
+
+      .hero__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #0891b2;
+        background: rgba(6, 182, 212, 0.08);
+        border: 1px solid rgba(6, 182, 212, 0.25);
+        padding: 8px 18px;
+        border-radius: 100px;
+        margin-bottom: 32px;
+        animation: fadeUp 0.6s ease both;
+      }
+
+      .hero__eyebrow .dot {
+        width: 6px;
+        height: 6px;
+        background: #06b6d4;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        margin-bottom: 24px;
+        animation: fadeUp 0.7s 0.1s ease both;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        max-width: 580px;
+        margin: 0 auto 40px;
+        line-height: 1.75;
+        animation: fadeUp 0.7s 0.2s ease both;
+      }
+
+      .hero .btn-group {
+        justify-content: center;
+        animation: fadeUp 0.7s 0.3s ease both;
+      }
+
+      .hero__stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        margin-top: 64px;
+        padding-top: 48px;
+        border-top: 1px solid var(--border-subtle);
+        animation: fadeUp 0.7s 0.4s ease both;
+      }
+
+      .hero__stat {
+        text-align: center;
+      }
+
+      .hero__stat-number {
+        font-family: "Syne", sans-serif;
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: #06b6d4;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .hero__stat p {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        margin: 0;
+      }
+
+      .hero__stat-divider {
+        width: 1px;
+        height: 48px;
+        background: var(--border-subtle);
+      }
+
+      /* Products Section */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .product-card {
+        padding: 36px;
+      }
+
+      .product-card__header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .product-logo {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: -0.5px;
+        flex-shrink: 0;
+      }
+
+      .product-logo--fudo {
+        background: cyan;
+        color: #000000;
+      }
+      .product-logo--repos {
+        background: cyan;
+        color: #000000;
+      }
+      .product-logo--rateus {
+        background: cyan;
+        color: #000000;
+      }
+      .product-logo--finx {
+        background: cyan;
+        color: #000000;
+      }
+
+      .product-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+      }
+      .product-card p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .product-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+
+      /* Features Section */
+      .features-section {
+        background: #f3f1ed;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+        background: rgba(0, 0, 0, 0.07);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+      }
+
+      .feature-item {
+        background: #f3f1ed;
+        padding: 40px 32px;
+        transition: var(--transition);
+      }
+
+      .feature-item:hover {
+        background: var(--bg-card);
+      }
+
+      .feature-item .card__icon {
+        margin-bottom: 16px;
+      }
+      .feature-item h4 {
+        margin-bottom: 8px;
+        color: var(--text-primary);
+      }
+
+      /* Why Choose Us */
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+
+      .why-left h2 {
+        margin-bottom: 20px;
+      }
+      .why-left p {
+        margin-bottom: 32px;
+      }
+
+      .why-points {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .why-point {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .why-point-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--accent-subtle);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .why-point h4 {
+        margin-bottom: 4px;
+        font-size: 1rem;
+      }
+      .why-point p {
+        font-size: 0.88rem;
+      }
+
+      .why-visual {
+        position: relative;
+      }
+
+      .why-visual-card {
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: var(--radius-xl);
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .why-visual-card::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(6, 182, 212, 0.2),
+          transparent 70%
+        );
+      }
+
+      .metric-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      }
+      .metric-row:last-child {
+        border-bottom: none;
+      }
+
+      .metric-label {
+        font-size: 0.88rem;
+        color: var(--text-secondary);
+      }
+      .metric-value {
+        font-family: "Syne", sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--text-primary);
+      }
+
+      .metric-bar {
+        width: 100%;
+        height: 4px;
+        background: var(--border-subtle);
+        border-radius: 2px;
+        margin-top: 8px;
+        overflow: hidden;
+      }
+
+      .metric-fill {
+        height: 100%;
+        border-radius: 2px;
+        background: #e0a449;
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .testimonial-card {
+        padding: 32px;
+      }
+
+      .testimonial-pic {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* CTA Section */
+      .cta-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      .cta-bg__orb1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 300px;
+        background: radial-gradient(
+          ellipse,
+          rgba(6, 182, 212, 0.12) 0%,
+          transparent 70%
+        );
+        filter: blur(40px);
+      }
+
+      /* Floating label */
+      .hero__scroll-hint {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        animation: fadeUp 1s 0.8s ease both;
+      }
+
+      .scroll-arrow {
+        width: 20px;
+        height: 30px;
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .scroll-arrow::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 8px;
+        background: #06b6d4;
+        border-radius: 2px;
+        animation: float 1.5s infinite;
+      }
+
+      @media (max-width: 768px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+        }
+        .why-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero__stats {
+          gap: 24px;
+        }
+        .hero__stat-number {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
+
+    <!-- ── NAVIGATION ──────────────────────────────────────────── -->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo">
+            <div class="nav__logo-icon nav__logo-icon--image">
+              <img
+                src="assets/images/logo.png"
+                alt="Magnex Solutions logo"
+                class="nav__logo-img"
+              />
+            </div>
+          </a>
+
+          <ul class="nav__links">
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            <li class="nav__item">
+              <button type="button" class="nav__link nav__link--dropdown">Products</button>
+              <div class="nav__dropdown">
+                <a href="fudo.html" class="nav__dropdown-link">FUDO</a>
+                <a href="repos.html" class="nav__dropdown-link">RePOS</a>
+                <a href="rateus.html" class="nav__dropdown-link">RateUS</a>
+                <a href="finx.html" class="nav__dropdown-link">FinX</a>
+              </div>
+            </li>
+            <li class="nav__item"><a href="solutions.html" class="nav__link">Solutions</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+          </ul>
+
+          <div class="nav__actions">
+            <a href="contact.html" class="btn btn-secondary btn-sm"
+              >Contact Us</a
+            >
+            <a href="contact.html#demo" class="btn btn-primary btn-sm"
+              >Book Demo</a
+            >
+          </div>
+
+          <button class="nav__hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="nav__mobile">
+      <a href="index.html" class="nav__link">Home</a>
+      
+      <div class="nav__mobile-products">
+        <a href="fudo.html" class="nav__link">FUDO</a>
+        <a href="repos.html" class="nav__link">RePOS</a>
+        <a href="rateus.html" class="nav__link">RateUS</a>
+        <a href="finx.html" class="nav__link">FinX</a>
+      </div>
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+      <a href="contact.html#demo" class="btn btn-primary">Book a Free Demo</a>
+    </div>
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero__bg">
+        <div class="hero__orb1"></div>
+        <div class="hero__orb2"></div>
+        <div class="hero__orb3"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__eyebrow">
+            <span class="dot"></span>
+            Built for Sri Lankan Businesses
+          </div>
+
+          <h1>
+            Smart Software for<br />
+            <span class="gradient-text">Restaurants &amp; Retail</span>
+          </h1>
+
+          <p>
+            Magnex Solutions builds intelligent POS systems and business
+            management software designed for restaurants and retail businesses
+            right here in Sri Lanka.
+          </p>
+
+          <div class="btn-group">
+            <a href="contact.html#demo" class="btn btn-primary btn-lg">
+              Book a Free Demo
+            </a>
+            <a href="fudo.html" class="btn btn-secondary btn-lg">
+              Explore FUDO →
+            </a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <div class="hero__stat-number">
+                <span data-counter data-target="50" data-suffix="+">50+</span>
+              </div>
+              <p>Businesses Served</p>
+            </div>
+            <div
+              class="hero__stat-divider"
+              style="background: rgba(0, 0, 0, 0.1)"
+            ></div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">
+                <span data-counter data-target="4" data-suffix="">4</span>
+              </div>
+              <p>Flagship Products</p>
+            </div>
+            <div
+              class="hero__stat-divider"
+              style="background: rgba(0, 0, 0, 0.1)"
+            ></div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">
+                <span data-counter data-target="99" data-suffix="%">99%</span>
+              </div>
+              <p>Uptime Guaranteed</p>
+            </div>
+            <div
+              class="hero__stat-divider"
+              style="background: rgba(0, 0, 0, 0.1)"
+            ></div>
+            <div class="hero__stat">
+              <div class="hero__stat-number">
+                <span data-counter data-target="24" data-suffix="/7">24/7</span>
+              </div>
+              <p>Local Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRODUCTS OVERVIEW ─────────────────────────────────────── -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Our Products</span>
+          <h2>Four Powerful Products.<br />One Unified Vision.</h2>
+          <p style="max-width: 560px; margin: 16px auto 0">
+            Each product in our suite is purpose-built to solve real problems
+            for real businesses across Sri Lanka.
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <!-- FUDO -->
+          <div class="card product-card reveal">
+            <div class="product-card__header">
+              <div class="product-logo product-logo--fudo">FUDO</div>
+              <div>
+                <div class="badge badge--cyan" style="margin-bottom: 4px">
+                  Restaurant POS
+                </div>
+                <h3 style="margin: 0">FUDO</h3>
+              </div>
+            </div>
+            <p>
+              A complete restaurant management POS system — from table orders to
+              kitchen display, billing, and analytics in one seamless platform.
+            </p>
+            <div class="product-tags">
+              <span class="badge badge--cyan">Point of Sale (POS)</span>
+              <span class="badge badge--cyan">Waiter Order Taking App</span>
+              <span class="badge badge--cyan">Online Reporting App</span>
+              <span class="badge badge--cyan">Inventory Management System</span>
+            </div>
+            <a href="fudo.html" class="btn btn-secondary btn-sm"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- RePOS -->
+          <div class="card product-card reveal">
+            <div class="product-card__header">
+              <div class="product-logo product-logo--repos">Re</div>
+              <div>
+                <div class="badge badge--cyan" style="margin-bottom: 4px">
+                  Retail POS
+                </div>
+                <h3 style="margin: 0">RePOS</h3>
+              </div>
+            </div>
+            <p>
+              Smart retail point-of-sale solution with inventory control,
+              barcode scanning, multi-store support, and real-time sales
+              dashboards.
+            </p>
+            <div class="product-tags">
+              <span class="badge badge--cyan">Point of Sale (POS)</span>
+              <span class="badge badge--cyan">Online Dashboard App</span>
+              <span class="badge badge--cyan">Inventory Management System</span>
+            </div>
+            <a href="repos.html" class="btn btn-secondary btn-sm"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- RateUS -->
+          <div class="card product-card reveal">
+            <div class="product-card__header">
+              <div class="product-logo product-logo--rateus">R★</div>
+              <div>
+                <div class="badge badge--cyan" style="margin-bottom: 4px">
+                  Customer Feedback
+                </div>
+                <h3 style="margin: 0">RateUS</h3>
+              </div>
+            </div>
+            <p>
+              Collect, analyse, and act on customer feedback in real time. Build
+              loyalty and reputation while identifying areas for improvement.
+            </p>
+            <div class="product-tags">
+              <span class="badge badge--cyan"
+                >Customer Feedback capturing system</span
+              >
+              <span class="badge badge--cyan">Insights</span>
+            </div>
+            <a href="rateus.html" class="btn btn-secondary btn-sm"
+              >Learn More →</a
+            >
+          </div>
+
+          <!-- FinX -->
+          <div class="card product-card reveal">
+            <div class="product-card__header">
+              <div class="product-logo product-logo--finx">FX</div>
+              <div>
+                <div class="badge badge--cyan" style="margin-bottom: 4px">
+                  Finance & Accounting
+                </div>
+                <h3 style="margin: 0">FinX</h3>
+              </div>
+            </div>
+            <p>
+              Financial Accounting System which could work with retail or
+              restaurant management system.
+            </p>
+            <div class="product-tags">
+              <span class="badge badge--cyan">Invoicing</span>
+              <span class="badge badge--cyan">Payroll</span>
+              <span class="badge badge--cyan">Tax Reports</span>
+            </div>
+            <a href="finx.html" class="btn btn-secondary btn-sm"
+              >Learn More →</a
+            >
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="fudo.html" class="btn btn-primary">Explore FUDO</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES ──────────────────────────────────────────────── -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Core Capabilities</span>
+          <h2>Everything Your Business Needs</h2>
+          <p style="max-width: 520px; margin: 16px auto 0">
+            Built-in tools that work together to give you complete control over
+            your operations.
+          </p>
+        </div>
+
+        <div class="features-grid reveal">
+          <div class="feature-item">
+            <div class="card__icon card__icon--violet">📊</div>
+            <h4>Real-Time Analytics</h4>
+            <p>
+              Live dashboards showing revenue, orders, and inventory levels —
+              making data-driven decisions effortless.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="card__icon card__icon--cyan">👥</div>
+            <h4>User Friendly</h4>
+            <p>
+              All our products are built with this as basic principle. We
+              understand user friendliness is the key to success.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div
+              class="card__icon card__icon--amber"
+              style="background: rgba(245, 158, 11, 0.1)"
+            >
+              🧾
+            </div>
+            <h4>Smart Billing</h4>
+            <p>
+              Fast, accurate billing with multi-payment support including cash,
+              card, and digital wallets.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div
+              class="card__icon card__icon--green"
+              style="background: rgba(16, 185, 129, 0.1)"
+            >
+              💡
+            </div>
+            <h4>Business Insights</h4>
+            <p>
+              AI-powered reports that reveal trends, peak hours, best sellers,
+              and customer behaviour patterns.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="card__icon card__icon--violet">👥</div>
+            <h4>Staff Management</h4>
+            <p>
+              Role-based access, shift scheduling, attendance tracking, and
+              performance reports for your team.
+            </p>
+          </div>
+          <div class="feature-item">
+            <div class="card__icon card__icon--cyan">☁️</div>
+            <h4>Cloud Sync</h4>
+            <p>
+              All your data secured in the cloud. Access from anywhere, recover
+              instantly — never lose a record.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── WHY CHOOSE US ─────────────────────────────────────────── -->
+    <section class="section" id="why">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-left reveal">
+            <span class="section-label">Why Magnex</span>
+            <h2>Sri Lanka's Most Trusted Business Software</h2>
+            <p>
+              We understand local businesses because we are one. Every feature
+              is designed with the Sri Lankan market in mind.
+            </p>
+
+            <div class="why-points">
+              <div class="why-point">
+                <div
+                  class="why-point-icon"
+                  style="
+                    background: rgba(6, 182, 212, 0.08);
+                    border-color: rgba(6, 182, 212, 0.2);
+                  "
+                >
+                  🇱🇰
+                </div>
+                <div>
+                  <h4>Locally Designed</h4>
+                  <p>
+                    Built in Sri Lanka for Sri Lankan business environments,
+                    regulations, and languages.
+                  </p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div
+                  class="why-point-icon"
+                  style="
+                    background: rgba(6, 182, 212, 0.08);
+                    border-color: rgba(6, 182, 212, 0.2);
+                  "
+                >
+                  ⚡
+                </div>
+                <div>
+                  <h4>Fast Onboarding</h4>
+                  <p>
+                    Go live within hours not weeks. Our team handles setup,
+                    training, and migration.
+                  </p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div
+                  class="why-point-icon"
+                  style="
+                    background: rgba(6, 182, 212, 0.08);
+                    border-color: rgba(6, 182, 212, 0.2);
+                  "
+                >
+                  🛡️
+                </div>
+                <div>
+                  <h4>Security</h4>
+                  <p>
+                    We understand security is utmost important in retail or
+                    restaurant business when it comes to software. So we take it
+                    seriously.
+                  </p>
+                </div>
+              </div>
+              <div class="why-point">
+                <div
+                  class="why-point-icon"
+                  style="
+                    background: rgba(6, 182, 212, 0.08);
+                    border-color: rgba(6, 182, 212, 0.2);
+                  "
+                >
+                  📞
+                </div>
+                <div>
+                  <h4>24/7 Local Support</h4>
+                  <p>
+                    Dedicated support team who speak your language and
+                    understand your business.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="why-visual reveal">
+            <div class="why-visual-card">
+              <h4
+                style="
+                  margin-bottom: 24px;
+                  color: var(--text-muted);
+                  font-size: 0.8rem;
+                  text-transform: uppercase;
+                  letter-spacing: 0.1em;
+                "
+              >
+                Live Business Metrics
+              </h4>
+              <div class="metric-row">
+                <span class="metric-label" style="color: #5a5a72"
+                  >Today's Revenue</span
+                >
+                <span
+                  class="metric-value"
+                  style="color: #12121e"
+                  style="color: #67e8f9"
+                  >LKR 148,250</span
+                >
+              </div>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 78%"></div>
+              </div>
+
+              <div class="metric-row" style="margin-top: 20px">
+                <span class="metric-label" style="color: #5a5a72"
+                  >Orders Processed</span
+                >
+                <span class="metric-value" style="color: #12121e">342</span>
+              </div>
+              <div class="metric-bar">
+                <div class="metric-fill" style="width: 65%"></div>
+              </div>
+
+              <div class="metric-row" style="margin-top: 20px">
+                <span class="metric-label" style="color: #5a5a72"
+                  >Customer Satisfaction</span
+                >
+                <span
+                  class="metric-value"
+                  style="color: #12121e"
+                  style="color: #67e8f9"
+                  >90%</span
+                >
+              </div>
+              <div class="metric-bar">
+                <div
+                  class="metric-fill"
+                  style="width: 90%; background: #e0a449"
+                ></div>
+              </div>
+
+              <div class="metric-row" style="margin-top: 20px">
+                <span class="metric-label" style="color: #5a5a72"
+                  >Stock Efficiency</span
+                >
+                <span
+                  class="metric-value"
+                  style="color: #12121e"
+                  style="color: #67e8f9"
+                  >88.1%</span
+                >
+              </div>
+              <div class="metric-bar">
+                <div
+                  class="metric-fill"
+                  style="width: 88%; background: #e0a449"
+                ></div>
+              </div>
+
+              <div
+                style="
+                  margin-top: 28px;
+                  padding-top: 24px;
+                  border-top: 1px solid var(--border-subtle);
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <div
+                  style="
+                    width: 8px;
+                    height: 8px;
+                    background: #059669;
+                    border-radius: 50%;
+                    animation: pulse 2s infinite;
+                  "
+                ></div>
+                <span style="font-size: 0.82rem; color: #9898b0"
+                  >Live — Updated just now</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ──────────────────────────────────────────── -->
+    <section class="section" style="background: #f3f1ed" id="testimonials">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">Clients</span>
+          <h2>Trusted by Businesses Across Sri Lanka</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/Barracuda_Logo.png"
+              alt="Barracuda Seafood & Grill"
+            />
+            <div class="testimonial-author">
+              <!--<div class="testimonial-avatar">RJ</div> -->
+              <div class="testimonial-author-info">
+                <h5>Barracuda Seafood & Grill</h5>
+                <p>
+                  Famous for it's seafood dishes Barracuda Seafood and Grill in
+                  Dehiwala
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/kottulabs.jpg"
+              alt="kottu labs"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="
+                  background: linear-gradient(135deg, var(--cyan), #0284c7);
+                "
+              >
+                NP
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Kottu Labs</h5>
+                <p>
+                  With a whole new concept of create your own kottu. You can
+                  Check them out @kottulabs.lk
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/flagandwhistle.png"
+              alt="flag and whistle"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Flag & Whistle Pub and Restaurant</h5>
+                <p>
+                  Best place to chill after a hectic day in Colombo 13 area
+                  looking over the Colombo Port
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/srisuryashotel.png"
+              alt="Sri Suryas Hotel"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Sri Suryas Hotel</h5>
+                <p>One of the leading vegetarian restaurant in Colombo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ──────────────────────────────────────────────── -->
+    <section class="cta-section" style="background: #f3f1ed">
+      <div class="cta-bg">
+        <div class="cta-bg__orb1"></div>
+      </div>
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="section-label" style="justify-content: center"
+            >Get Started Today</span
+          >
+          <h2>Ready to Transform Your Business?</h2>
+          <p>
+            Join 50+ businesses across Sri Lanka already growing with Magnex
+            Solutions. Book a free demo and see the difference in 30 minutes.
+          </p>
+          <div class="btn-group" style="justify-content: center">
+            <a href="contact.html#demo" class="btn btn-primary btn-lg"
+              >Book a Free Demo</a
+            >
+            <a href="contact.html" class="btn btn-secondary btn-lg"
+              >Contact Our Team</a
+            >
+          </div>
+          <div class="pricing-note mt-4">
+            <span>✓</span> No setup fees &nbsp;·&nbsp; <span>✓</span> Free
+            14-day trial &nbsp;·&nbsp; <span>✓</span> No credit card required
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo" style="margin-bottom: 0">
+              <div class="nav__logo-icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              Magnex Solutions
+            </a>
+            <p>
+              Empowering Sri Lankan restaurants and retail businesses with
+              worldclass POS and management software.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5>Products</h5>
+            <a href="fudo.html">FUDO</a>
+            <a href="repos.html">RePOS</a>
+            <a href="rateus.html">RateUS</a>
+            <a href="finx.html">FinX</a>
+          </div>
+          <div class="footer__col">
+            <h5>Company</h5>
+            <a href="about.html">About Us</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html#demo">Book Demo</a>
+          </div>
+          <div class="footer__col">
+            <h5>Connect</h5>
+            <a href="mailto:sales@magnexsolutions.com"
+              >sales@magnexsolutions.com</a
+            >
+            <a href="tel:+94 11 232 5233">+94 11 232 5233</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© 2025 Magnex Solutions (Pvt) Ltd. All rights reserved.</span>
+          <span>Colombo, Sri Lanka 🇱🇰</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
