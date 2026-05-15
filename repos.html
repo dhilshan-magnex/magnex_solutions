@@ -1,48 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RePOS - Magnex Solutions</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/product-pages.css" />
-</head>
-<body>
-<div class="noise-overlay"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RePOS - Magnex Solutions</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/product-pages.css" />
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
 
-<nav class="nav scrolled">
-  <div class="container"><div class="nav__inner">
-    <a href="index.html" class="nav__logo"><div class="nav__logo-icon nav__logo-icon--image"><img src="assets/images/logo.png" alt="Magnex Solutions logo" class="nav__logo-img" /></div></a>
-    <ul class="nav__links">
-      <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-      <li class="nav__item"><button type="button" class="nav__link nav__link--dropdown active">Products</button><div class="nav__dropdown"><a href="fudo.html" class="nav__dropdown-link">FUDO</a><a href="repos.html" class="nav__dropdown-link active">RePOS</a><a href="rateus.html" class="nav__dropdown-link">RateUS</a><a href="finx.html" class="nav__dropdown-link">FinX</a></div></li>
-      <li class="nav__item"><a href="solutions.html" class="nav__link">Solutions</a></li>
-      <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-      <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-    </ul>
-    <div class="nav__actions"><a href="contact.html" class="btn btn-secondary btn-sm">Contact Us</a><a href="contact.html#demo" class="btn btn-primary btn-sm">Book Demo</a></div>
-    <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  </div></div>
-</nav>
-<div class="nav__mobile"><a href="index.html" class="nav__link">Home</a><div class="nav__mobile-products"><a href="fudo.html" class="nav__link">FUDO</a><a href="repos.html" class="nav__link active">RePOS</a><a href="rateus.html" class="nav__link">RateUS</a><a href="finx.html" class="nav__link">FinX</a></div><a href="solutions.html" class="nav__link">Solutions</a><a href="about.html" class="nav__link">About</a><a href="contact.html" class="nav__link">Contact</a><a href="contact.html#demo" class="btn btn-primary">Book a Free Demo</a></div>
-
-<div class="page-hero"><div class="container"><span class="section-label">Retail POS System</span><h1>RePOS Retail <span class="gradient-text">Management</span></h1><p>Run billing, inventory, customers, suppliers, and multi-store reporting from one practical retail platform.</p></div></div>
-
-<main class="container">
-  <section class="product-detail"><div class="product-detail-inner reverse">
-    <div class="reveal">
-      <div class="product-name-block"><div class="product-logo-lg logo-repos">Re</div><div><div class="badge badge--cyan mb-1">Retail POS</div><h2 style="font-size:2rem;">Made for growing retailers</h2></div></div>
-      <p class="product-desc">RePOS gives retail businesses a reliable point-of-sale system with inventory control, barcode scanning, customer profiles, and real-time reports across single-store or multi-store operations.</p>
-      <div class="feature-grid-2"><div class="feature-chip">Barcode Scanner</div><div class="feature-chip">Inventory Tracking</div><div class="feature-chip">Multi-Store Support</div><div class="feature-chip">Customer Profiles</div><div class="feature-chip">Loyalty Points</div><div class="feature-chip">Purchase Orders</div><div class="feature-chip">Supplier Management</div><div class="feature-chip">Daily/Weekly Reports</div></div>
-      <div class="btn-group"><a href="contact.html#demo" class="btn btn-primary">Book a Demo</a><a href="solutions.html#retail" class="btn btn-secondary">View Retail Solution</a></div>
+    <nav class="nav scrolled">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo"
+            ><div class="nav__logo-icon nav__logo-icon--image">
+              <img
+                src="assets/images/logo.png"
+                alt="Magnex Solutions logo"
+                class="nav__logo-img"
+              /></div
+          ></a>
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <button
+                type="button"
+                class="nav__link nav__link--dropdown active"
+              >
+                Products
+              </button>
+              <div class="nav__dropdown">
+                <a href="fudo.html" class="nav__dropdown-link">FUDO</a
+                ><a href="repos.html" class="nav__dropdown-link active">RePOS</a
+                ><a href="rateus.html" class="nav__dropdown-link">RateUS</a
+                ><a href="finx.html" class="nav__dropdown-link">FinX</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="solutions.html" class="nav__link">Solutions</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav__actions">
+            <a href="contact.html" class="btn btn-secondary btn-sm"
+              >Contact Us</a
+            ><a href="contact.html#demo" class="btn btn-primary btn-sm"
+              >Book Demo</a
+            >
+          </div>
+          <button class="nav__hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav__mobile">
+      <a href="index.html" class="nav__link">Home</a>
+      <div class="nav__mobile-products">
+        <a href="fudo.html" class="nav__link">FUDO</a
+        ><a href="repos.html" class="nav__link active">RePOS</a
+        ><a href="rateus.html" class="nav__link">RateUS</a
+        ><a href="finx.html" class="nav__link">FinX</a>
+      </div>
+      <a href="solutions.html" class="nav__link">Solutions</a
+      ><a href="about.html" class="nav__link">About</a
+      ><a href="contact.html" class="nav__link">Contact</a
+      ><a href="contact.html#demo" class="btn btn-primary">Book a Free Demo</a>
     </div>
-    <div class="product-visual repos-visual reveal"><div class="mock-screen"><div class="mock-header"><div class="mock-dot" style="background:#ff5f57;"></div><div class="mock-dot" style="background:#febc2e;"></div><div class="mock-dot" style="background:#28c840;"></div><span style="font-size:0.75rem;color:#9898b0;margin-left:8px;">RePOS Inventory</span></div><div class="mock-row"><span>Total SKUs</span><span>2,847</span></div><div class="mock-row"><span>Low Stock Alerts</span><span style="color:#f87171;">12 items</span></div><div class="mock-row"><span>Today's Sales</span><span style="color:#34d399;">LKR 124,780</span></div><div class="mock-row"><span>Transactions</span><span>193</span></div><div class="mock-row"><span>Top Seller</span><span style="color:var(--cyan);">Product A</span></div><div class="mock-chart"><div class="mock-bar" style="height:55%;background:var(--cyan);"></div><div class="mock-bar" style="height:70%;background:var(--cyan);"></div><div class="mock-bar" style="height:45%;background:var(--cyan);"></div><div class="mock-bar" style="height:85%;background:var(--cyan);"></div><div class="mock-bar" style="height:60%;background:var(--cyan);"></div><div class="mock-bar" style="height:100%;background:linear-gradient(180deg,#67e8f9,var(--cyan));"></div><div class="mock-bar" style="height:72%;background:var(--cyan);"></div></div></div></div>
-  </div></section>
-</main>
 
-<section class="section--sm" style="background:#f3f1ed;"><div class="container"><div class="product-page-grid"><div class="card product-page-card reveal"><h4>Inventory Clarity</h4><p>Know what is selling, what is low, and what needs to be reordered.</p></div><div class="card product-page-card reveal"><h4>Store Control</h4><p>Standardize sales and stock data across branches from one dashboard.</p></div><div class="card product-page-card reveal"><h4>Customer Value</h4><p>Build customer profiles and loyalty workflows that encourage repeat sales.</p></div></div></div></section>
-<section class="cta-section" style="background:#f3f1ed;"><div class="container"><div class="cta-inner reveal"><span class="section-label" style="justify-content:center;">Start Today</span><h2>Ready to upgrade your retail POS?</h2><p>Book a free demo and see how RePOS handles sales, stock, and reporting.</p><div class="btn-group" style="justify-content:center;"><a href="contact.html#demo" class="btn btn-primary btn-lg">Book a Free Demo</a><a href="rateus.html" class="btn btn-secondary btn-lg">View RateUS</a></div></div></div></section>
-<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="index.html" class="nav__logo"><div class="nav__logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div>Magnex Solutions</a><p>Empowering Sri Lankan restaurants and retail businesses with world-class software.</p></div><div class="footer__col"><h5>Products</h5><a href="fudo.html">FUDO</a><a href="repos.html">RePOS</a><a href="rateus.html">RateUS</a><a href="finx.html">FinX</a></div><div class="footer__col"><h5>Company</h5><a href="about.html">About Us</a><a href="solutions.html">Solutions</a><a href="contact.html">Contact</a></div><div class="footer__col"><h5>Contact</h5><a href="mailto:sales@magnexsolutions.com">sales@magnexsolutions.com</a><a href="tel:+94 11 232 5233">+94 11 232 5233</a></div></div><div class="footer__bottom"><span>&copy; 2025 Magnex Solutions (Pvt) Ltd.</span><span>Colombo, Sri Lanka</span></div></div></footer>
-<script src="assets/js/main.js"></script>
-</body>
+    <div class="page-hero">
+      <div class="container">
+        <span class="section-label">Retail POS System</span>
+        <h1>RePOS Retail <span class="gradient-text">Management</span></h1>
+        <p>
+          Magnex solutions retail management system (RePOS) is developed to fit
+          all sizes of retail business, be it a small grocery or a multiple
+          counter supermarket or a department store our RePOS will fit perfectly
+          for your retail business.
+        </p>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="product-detail">
+        <div class="product-detail-inner reverse">
+          <div class="reveal">
+            <div class="product-name-block">
+              <div class="product-logo-lg logo-repos">Re</div>
+              <div>
+                <div class="badge badge--cyan mb-1">Retail POS</div>
+                <h2 style="font-size: 2rem">RePOS Retail Management System</h2>
+              </div>
+            </div>
+            <p class="product-desc">
+              RePOS is easy to use POS application which makes new users to get
+              used to it faster or even an experienced user from another
+              application to convert into RePOS user in short time keeping the
+              learning curve smaller. Our RePOS suite covers complete retail
+              business requirements which is built on the latest technology.
+              RePOS is fast and easy to application.
+            </p>
+            <div class="feature-grid-2">
+              <div class="feature-chip">Barcode Scanner</div>
+              <div class="feature-chip">Inventory Tracking</div>
+              <div class="feature-chip">Multi-Store Support</div>
+              <div class="feature-chip">Customer Profiles</div>
+              <div class="feature-chip">Loyalty Points</div>
+              <div class="feature-chip">Purchase Orders</div>
+              <div class="feature-chip">Supplier Management</div>
+              <div class="feature-chip">Daily/Weekly Reports</div>
+            </div>
+            <div class="btn-group">
+              <a href="contact.html#demo" class="btn btn-primary">Book a Demo</a
+              ><a href="solutions.html#retail" class="btn btn-secondary"
+                >View Retail Solution</a
+              >
+            </div>
+          </div>
+          <div class="product-visual repos-visual reveal">
+            <div class="product-image-frame">
+              <img
+                src="assets/images/RePOS_Retail_Management.jpg"
+                alt="RePOS retail management product screen"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail-inner">
+          <div class="reveal">
+            <div class="product-name-block">
+              <div class="product-logo-lg logo-repos">Re</div>
+              <div>
+                <div class="badge badge--cyan mb-1">RePOS</div>
+                <h2 style="font-size: 2rem">RePOS(Retail POS System)</h2>
+              </div>
+            </div>
+            <p class="product-desc">
+              RePOS helps cashiers move through sales quickly with barcode
+              scanning, fast item lookup, discounts, returns, and clean payment
+              handling.
+            </p>
+            <div class="feature-grid-2">
+              <div class="feature-chip">Barcode Billing</div>
+              <div class="feature-chip">Quick Item Search by Item Code</div>
+              <div class="feature-chip">Discount Controls</div>
+              <div class="feature-chip">Returns</div>
+              <div class="feature-chip">Multiple Payments</div>
+              <div class="feature-chip">Receipt Printing</div>
+              <div class="feature-chip">Cash Drawer</div>
+              <div class="feature-chip">Hold Bills</div>
+            </div>
+            <div class="btn-group">
+              <a href="contact.html#demo" class="btn btn-primary">Book a Demo</a
+              ><a href="solutions.html#retail" class="btn btn-secondary"
+                >View Retail Solution</a
+              >
+            </div>
+          </div>
+          <div class="product-visual repos-visual reveal">
+            <div class="product-image-frame">
+              <img
+                src="assets/images/RePOS(Retail POS System).png"
+                alt="RePOS billing product screen"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail-inner reverse">
+          <div class="reveal">
+            <div class="product-name-block">
+              <div class="product-logo-lg logo-repos">Re</div>
+              <div>
+                <div class="badge badge--cyan mb-1">Inventory</div>
+                <h2 style="font-size: 2rem">
+                  RePOS Back Office (Inventory Management System)
+                </h2>
+              </div>
+            </div>
+            <p class="product-desc">
+              RePOS back office is a inventory management system for retail
+              business. RePOS can support small single counter shops to multi
+              counter supermarkets. It allows you to record all product
+              movements from material request to physical stock count.
+            </p>
+            <div class="feature-grid-2">
+              <div class="feature-chip">Product Creation</div>
+              <div class="feature-chip">Multiple packing</div>
+              <div class="feature-chip">Material Request</div>
+              <div class="feature-chip">Purchase Order Creation</div>
+              <div class="feature-chip">GRN (Purchase) Entry</div>
+              <div class="feature-chip">Stock Adjustments</div>
+              <div class="feature-chip">Batch Tracking</div>
+              <div class="feature-chip">Reorder Points</div>
+            </div>
+            <div class="btn-group">
+              <a href="contact.html#demo" class="btn btn-primary">Book a Demo</a
+              ><a href="solutions.html#retail" class="btn btn-secondary"
+                >View Retail Solution</a
+              >
+            </div>
+          </div>
+          <div class="product-visual repos-visual reveal">
+            <div class="product-image-frame">
+              <img
+                src="assets/images/reposbackoffice.png"
+                alt="RePOS inventory product screen"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="product-detail-inner">
+          <div class="reveal">
+            <div class="product-name-block">
+              <div class="product-logo-lg logo-repos">Re</div>
+              <div>
+                <div class="badge badge--cyan mb-1">Live Dashboard</div>
+                <h2 style="font-size: 2rem">RePOS Live Dashboard (Optional)</h2>
+              </div>
+            </div>
+            <p class="product-desc">
+              Manage purchase orders, supplier records, cost prices, and goods
+              received so your buying process stays connected to inventory.
+            </p>
+            <div class="feature-grid-2">
+              <div class="feature-chip">Purchase Orders</div>
+              <div class="feature-chip">Live Total Sales</div>
+              <div class="feature-chip">Supplier Profiles</div>
+              <div class="feature-chip">Cloud Based Solution</div>
+              <div class="feature-chip">Due Payments</div>
+              <div class="feature-chip">Supplier Returns</div>
+              <div class="feature-chip">GRN Tracking</div>
+              <div class="feature-chip">Purchase Reports</div>
+            </div>
+            <div class="btn-group">
+              <a href="contact.html#demo" class="btn btn-primary">Book a Demo</a
+              ><a href="solutions.html#retail" class="btn btn-secondary"
+                >View Retail Solution</a
+              >
+            </div>
+          </div>
+          <div class="product-visual repos-visual reveal">
+            <div class="product-image-frame product-image-frame--contain">
+              <img
+                src="assets/images/reposliveDashboard.png"
+                alt="RePOS live dashboard product screen"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="section--sm" style="background: #f3f1ed">
+      <div class="container">
+        <div class="product-page-grid">
+          <div class="card product-page-card reveal">
+            <h4>Inventory Clarity</h4>
+            <p>
+              Know what is selling, what is low, and what needs to be reordered.
+            </p>
+          </div>
+          <div class="card product-page-card reveal">
+            <h4>Store Control</h4>
+            <p>
+              Standardize sales and stock data across branches from one
+              dashboard.
+            </p>
+          </div>
+          <div class="card product-page-card reveal">
+            <h4>Customer Value</h4>
+            <p>
+              Build customer profiles and loyalty workflows that encourage
+              repeat sales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section" style="background: #f3f1ed">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="section-label" style="justify-content: center"
+            >Start Today</span
+          >
+          <h2>Ready to upgrade your retail POS?</h2>
+          <p>
+            Book a free demo and see how RePOS handles sales, stock, and
+            reporting.
+          </p>
+          <div class="btn-group" style="justify-content: center">
+            <a href="contact.html#demo" class="btn btn-primary btn-lg"
+              >Book a Free Demo</a
+            ><a href="rateus.html" class="btn btn-secondary btn-lg"
+              >View RateUS</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo"
+              ><div class="nav__logo-icon">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              Magnex Solutions</a
+            >
+            <p>
+              Empowering Sri Lankan restaurants and retail businesses with
+              world-class software.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5>Products</h5>
+            <a href="fudo.html">FUDO</a><a href="repos.html">RePOS</a
+            ><a href="rateus.html">RateUS</a><a href="finx.html">FinX</a>
+          </div>
+          <div class="footer__col">
+            <h5>Company</h5>
+            <a href="about.html">About Us</a
+            ><a href="solutions.html">Solutions</a
+            ><a href="contact.html">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h5>Contact</h5>
+            <a href="mailto:sales@magnexsolutions.com"
+              >sales@magnexsolutions.com</a
+            ><a href="tel:+94 11 232 5233">+94 11 232 5233</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>&copy; 2025 Magnex Solutions (Pvt) Ltd.</span
+          ><span>Colombo, Sri Lanka</span>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
