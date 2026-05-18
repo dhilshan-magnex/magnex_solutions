@@ -625,7 +625,7 @@ p { color: #5a5a72; }
   align-items: center;
   justify-content: center;
   width: 20px; height: 20px;
-  background: rgba(255, 140, 0, 0.1);
+  background: white;
   border-radius: 50%;
   color: var(--accent-light);
   font-size: 0.7rem;

@@ -1,48 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinX - Magnex Solutions</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/product-pages.css" />
-</head>
-<body>
-<div class="noise-overlay"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinX - Magnex Solutions</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/product-pages.css" />
+  </head>
+  <body>
+    <div class="noise-overlay"></div>
 
-<nav class="nav scrolled">
-  <div class="container"><div class="nav__inner">
-    <a href="index.html" class="nav__logo"><div class="nav__logo-icon nav__logo-icon--image"><img src="assets/images/logo.png" alt="Magnex Solutions logo" class="nav__logo-img" /></div></a>
-    <ul class="nav__links">
-      <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-      <li class="nav__item"><button type="button" class="nav__link nav__link--dropdown active">Products</button><div class="nav__dropdown"><a href="fudo.html" class="nav__dropdown-link">FUDO</a><a href="repos.html" class="nav__dropdown-link">RePOS</a><a href="rateus.html" class="nav__dropdown-link">RateUS</a><a href="finx.html" class="nav__dropdown-link active">FinX</a></div></li>
-      <li class="nav__item"><a href="solutions.html" class="nav__link">Solutions</a></li>
-      <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
-      <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
-    </ul>
-    <div class="nav__actions"><a href="contact.html" class="btn btn-secondary btn-sm">Contact Us</a><a href="contact.html#demo" class="btn btn-primary btn-sm">Book Demo</a></div>
-    <button class="nav__hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  </div></div>
-</nav>
-<div class="nav__mobile"><a href="index.html" class="nav__link">Home</a><div class="nav__mobile-products"><a href="fudo.html" class="nav__link">FUDO</a><a href="repos.html" class="nav__link">RePOS</a><a href="rateus.html" class="nav__link">RateUS</a><a href="finx.html" class="nav__link active">FinX</a></div><a href="solutions.html" class="nav__link">Solutions</a><a href="about.html" class="nav__link">About</a><a href="contact.html" class="nav__link">Contact</a><a href="contact.html#demo" class="btn btn-primary">Book a Free Demo</a></div>
-
-<div class="page-hero"><div class="container"><span class="section-label">Finance &amp; Accounting</span><h1>FinX Business <span class="gradient-text">Finance</span></h1><p>Manage invoices, expenses, payroll, tax-ready reports, and cash flow from one finance platform that works alongside your operations.</p></div></div>
-
-<main class="container">
-  <section class="product-detail"><div class="product-detail-inner reverse">
-    <div class="reveal">
-      <div class="product-name-block"><div class="product-logo-lg logo-finx">FX</div><div><div class="badge badge--green mb-1">Finance &amp; Accounting</div><h2 style="font-size:2rem;">Clearer business finance</h2></div></div>
-      <p class="product-desc">FinX gives owners and finance teams a complete view of business performance with invoicing, expense tracking, payroll, reconciliation, and management reports in one place.</p>
-      <div class="feature-grid-2"><div class="feature-chip">Invoice Generation</div><div class="feature-chip">Expense Tracking</div><div class="feature-chip">Payroll Management</div><div class="feature-chip">Tax Compliance</div><div class="feature-chip">P&amp;L Reports</div><div class="feature-chip">Bank Reconciliation</div><div class="feature-chip">Budget Planning</div><div class="feature-chip">Cash Flow Analysis</div></div>
-      <div class="btn-group"><a href="contact.html#demo" class="btn btn-primary">Book a Demo</a><a href="solutions.html#accounting" class="btn btn-secondary">View Accounting Solution</a></div>
+    <nav class="nav scrolled">
+      <div class="container">
+        <div class="nav__inner">
+          <a href="index.html" class="nav__logo"
+            ><div class="nav__logo-icon nav__logo-icon--image">
+              <img
+                src="assets/images/logo.png"
+                alt="Magnex Solutions logo"
+                class="nav__logo-img"
+              /></div
+          ></a>
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <button
+                type="button"
+                class="nav__link nav__link--dropdown active"
+              >
+                Products
+              </button>
+              <div class="nav__dropdown">
+                <a href="fudo.html" class="nav__dropdown-link">FUDO</a
+                ><a href="repos.html" class="nav__dropdown-link">RePOS</a
+                ><a href="rateus.html" class="nav__dropdown-link">RateUS</a
+                ><a href="finx.html" class="nav__dropdown-link active">FinX</a>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a href="solutions.html" class="nav__link">Solutions</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="contact.html" class="nav__link">Contact</a>
+            </li>
+          </ul>
+          <div class="nav__actions">
+            <a href="contact.html" class="btn btn-secondary btn-sm"
+              >Contact Us</a
+            ><a href="contact.html#demo" class="btn btn-primary btn-sm"
+              >Book Demo</a
+            >
+          </div>
+          <button class="nav__hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="nav__mobile">
+      <a href="index.html" class="nav__link">Home</a>
+      <div class="nav__mobile-products">
+        <a href="fudo.html" class="nav__link">FUDO</a
+        ><a href="repos.html" class="nav__link">RePOS</a
+        ><a href="rateus.html" class="nav__link">RateUS</a
+        ><a href="finx.html" class="nav__link active">FinX</a>
+      </div>
+      <a href="solutions.html" class="nav__link">Solutions</a
+      ><a href="about.html" class="nav__link">About</a
+      ><a href="contact.html" class="nav__link">Contact</a
+      ><a href="contact.html#demo" class="btn btn-primary">Book a Free Demo</a>
     </div>
-    <div class="product-visual finx-visual reveal"><div class="product-image-frame"><img src="assets/images/fudoback.png" alt="FinX finance platform product screen" /></div></div>
-  </div></section>
-</main>
 
-<section class="section--sm" style="background:#f3f1ed;"><div class="container"><div class="product-page-grid"><div class="card product-page-card reveal"><h4>Finance Visibility</h4><p>See revenue, expenses, invoices, and profit trends without spreadsheet delays.</p></div><div class="card product-page-card reveal"><h4>Operational Fit</h4><p>Use finance data alongside restaurant or retail operations for cleaner decisions.</p></div><div class="card product-page-card reveal"><h4>Report Ready</h4><p>Prepare management and tax reports with structured finance records.</p></div></div></div></section>
-<section class="cta-section" style="background:#f3f1ed;"><div class="container"><div class="cta-inner reveal"><span class="section-label" style="justify-content:center;">Start Today</span><h2>Ready for cleaner financial control?</h2><p>Book a free demo and see how FinX can support your finance workflow.</p><div class="btn-group" style="justify-content:center;"><a href="contact.html#demo" class="btn btn-primary btn-lg">Book a Free Demo</a><a href="fudo.html" class="btn btn-secondary btn-lg">View FUDO</a></div></div></div></section>
-<footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="index.html" class="nav__logo"><div class="nav__logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div>Magnex Solutions</a><p>Empowering Sri Lankan restaurants and retail businesses with world-class software.</p></div><div class="footer__col"><h5>Products</h5><a href="fudo.html">FUDO</a><a href="repos.html">RePOS</a><a href="rateus.html">RateUS</a><a href="finx.html">FinX</a></div><div class="footer__col"><h5>Company</h5><a href="about.html">About Us</a><a href="solutions.html">Solutions</a><a href="contact.html">Contact</a></div><div class="footer__col"><h5>Contact</h5><a href="mailto:sales@magnexsolutions.com">sales@magnexsolutions.com</a><a href="tel:+94 11 232 5233">+94 11 232 5233</a></div></div><div class="footer__bottom"><span>&copy; 2025 Magnex Solutions (Pvt) Ltd.</span><span>Colombo, Sri Lanka</span></div></div></footer>
-<script src="assets/js/main.js"></script>
-</body>
+    <div class="page-hero">
+      <div class="container">
+        <span class="section-label">Finance &amp; Accounting</span>
+        <h1>FinX Business <span class="gradient-text">Finance</span></h1>
+        <p>
+          Manage invoices, expenses, payroll, tax-ready reports, and cash flow
+          from one finance platform that works alongside your operations.
+        </p>
+      </div>
+    </div>
+
+    <main class="container">
+      <section class="product-detail">
+        <div class="product-detail-inner reverse">
+          <div class="reveal">
+            <div class="product-name-block">
+              <div class="product-logo-lg logo-finx">FX</div>
+              <div>
+                <div class="badge badge--green mb-1">
+                  Finance &amp; Accounting
+                </div>
+                <h2 style="font-size: 2rem">Clearer business finance</h2>
+              </div>
+            </div>
+            <p class="product-desc">
+              FinX gives owners and finance teams a complete view of business
+              performance with invoicing, expense tracking, payroll,
+              reconciliation, and management reports in one place.
+            </p>
+            <div class="feature-grid-2">
+              <div class="feature-chip">Invoice Generation</div>
+              <div class="feature-chip">Expense Tracking</div>
+              <div class="feature-chip">Payroll Management</div>
+              <div class="feature-chip">Tax Compliance</div>
+              <div class="feature-chip">P&amp;L Reports</div>
+              <div class="feature-chip">Bank Reconciliation</div>
+              <div class="feature-chip">Budget Planning</div>
+              <div class="feature-chip">Cash Flow Analysis</div>
+            </div>
+            <div class="btn-group">
+              <a href="contact.html#demo" class="btn btn-primary">Book a Demo</a
+              ><a href="solutions.html#accounting" class="btn btn-secondary"
+                >View Accounting Solution</a
+              >
+            </div>
+          </div>
+          <div class="product-visual finx-visual reveal">
+            <div class="product-image-frame">
+              <img
+                src="assets/images/fudoback.png"
+                alt="FinX finance platform product screen"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="section--sm" style="background: #f3f1ed">
+      <div class="container">
+        <div class="product-page-grid">
+          <div class="card product-page-card reveal">
+            <h4>Finance Visibility</h4>
+            <p>
+              See revenue, expenses, invoices, and profit trends without
+              spreadsheet delays.
+            </p>
+          </div>
+          <div class="card product-page-card reveal">
+            <h4>Operational Fit</h4>
+            <p>
+              Use finance data alongside restaurant or retail operations for
+              cleaner decisions.
+            </p>
+          </div>
+          <div class="card product-page-card reveal">
+            <h4>Report Ready</h4>
+            <p>
+              Prepare management and tax reports with structured finance
+              records.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section" style="background: #f3f1ed">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <span class="section-label" style="justify-content: center"
+            >Start Today</span
+          >
+          <h2>Ready for cleaner financial control?</h2>
+          <p>
+            Book a free demo and see how FinX can support your finance workflow.
+          </p>
+          <div class="btn-group" style="justify-content: center">
+            <a href="contact.html#demo" class="btn btn-primary btn-lg"
+              >Book a Free Demo</a
+            ><a href="fudo.html" class="btn btn-secondary btn-lg">View FUDO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="nav__logo">
+              <div class="nav__logo-icon nav__logo-icon--image">
+                <img
+                  src="assets/images/logo.png"
+                  alt="Magnex Solutions logo"
+                  class="nav__logo-img"
+                />
+              </div>
+            </a>
+            <p>
+              Empowering Sri Lankan restaurants and retail businesses with
+              world-class software.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h5>Products</h5>
+            <a href="fudo.html">FUDO</a><a href="repos.html">RePOS</a
+            ><a href="rateus.html">RateUS</a><a href="finx.html">FinX</a>
+          </div>
+          <div class="footer__col">
+            <h5>Company</h5>
+            <a href="about.html">About Us</a
+            ><a href="solutions.html">Solutions</a
+            ><a href="contact.html">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h5>Contact</h5>
+            <a href="mailto:sales@magnexsolutions.com"
+              >sales@magnexsolutions.com</a
+            ><a href="tel:+94 11 232 5233">+94 11 232 5233</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>&copy; 2025 Magnex Solutions (Pvt) Ltd.</span
+          ><span>Colombo, Sri Lanka</span>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
