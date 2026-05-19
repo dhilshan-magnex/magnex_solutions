@@ -377,12 +377,16 @@
       /* Testimonials */
       .testimonials-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 24px;
+        align-items: stretch;
       }
 
       .testimonial-card {
         padding: 32px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
       }
 
       .testimonial-pic {
@@ -392,6 +396,10 @@
         object-fit: cover;
         border-radius: 8px;
         margin-bottom: 20px;
+      }
+
+      .testimonial-author {
+        margin-top: auto;
       }
 
       /* CTA Section */
@@ -499,7 +507,7 @@
               <div class="nav__dropdown">
                 <a href="fudo.html" class="nav__dropdown-link">FUDO</a>
                 <a href="repos.html" class="nav__dropdown-link">RePOS</a>
-                <a href="rateus.html" class="nav__dropdown-link">RateUS</a>
+                <!--<a href="rateus.html" class="nav__dropdown-link">RateUS</a>-->
                 <a href="finx.html" class="nav__dropdown-link">FinX</a>
               </div>
             </li>
@@ -1077,6 +1085,181 @@
               </div>
             </div>
           </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/Aacharys.jpg"
+              alt="Aacharys"
+            />
+            <div class="testimonial-author">
+              <!--<div class="testimonial-avatar">RJ</div> -->
+              <div class="testimonial-author-info">
+                <h5>Aacharys Kitchen</h5>
+                <p>
+                  Known for their authentic Sri Lankan cuisine and warm hospitality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/Dao.jpg"
+              alt="Dao Krua Thai"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="
+                  background: linear-gradient(135deg, var(--cyan), #0284c7);
+                "
+              >
+                NP
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Dao Krua Thai</h5>
+                <p>
+                  A slice of Thailand in Colombo, offering vibrant flavors and a cozy atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/indian kitchen.png"
+              alt="Indian Kitchen"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Indian Kitchen</h5>
+                <p>
+                  A popular spot for authentic Indian cuisine in Colombo, known for its rich flavors and vibrant spices.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/lavins.jpg"
+              alt="lavins"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Lavins Vegeterian Family Restaurant</h5>
+                <p>A sweet start to your day at Lavin's Vegetarian Family Restaurant where every bite feels like home! </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/sanctuari.jpg"
+              alt="Sanctuary"
+            />
+            <div class="testimonial-author">
+              <!--<div class="testimonial-avatar">RJ</div> -->
+              <div class="testimonial-author-info">
+                <h5>Sancutary Cuisine & Cocktail</h5>
+                <p>
+                  A hidden gem in Colombo offering a unique blend of global flavors and creative cocktails in a cozy setting.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/sri vihar.jpg"
+              alt="Sri Vihar"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="
+                  background: linear-gradient(135deg, var(--cyan), #0284c7);
+                "
+              >
+                NP
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Sri Vihar Divine Indian Cusine</h5>
+                <p>
+                  A beloved local favorite known for its authentic flavors and warm atmosphere.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/TORO.jpg"
+              alt="Toro"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>TORO Pub & Restaurant</h5>
+                <p>
+                  A vibrant spot in Colombo known for its lively atmosphere, delicious food, and creative cocktails.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card testimonial-card reveal">
+            <div class="testimonial-stars">★★★★★</div>
+            <img
+              class="testimonial-pic"
+              src="assets/images/vaishnavi.jpg"
+              alt="Vaishnavi"
+            />
+            <div class="testimonial-author">
+              <!--<div
+                class="testimonial-avatar"
+                style="background: linear-gradient(135deg, #10b981, #059669)"
+              >
+                SK
+              </div> -->
+              <div class="testimonial-author-info">
+                <h5>Sri Vaishnavivihar Pure Vegetarian</h5>
+                <p>A delightful vegetarian dining experience in the heart of Colombo.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -1147,8 +1330,8 @@
               >sales@magnexsolutions.com</a
             >
             <a href="tel:+94 11 232 5233">+94 11 232 5233</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
+            <a href="https://www.linkedin.com/company/magnex-solutions/?originalSubdomain=lk">LinkedIn</a>
+            <a href="https://www.facebook.com/magnexsolutions/">Facebook</a>
           </div>
         </div>
         <div class="footer__bottom">

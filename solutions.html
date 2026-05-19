@@ -34,14 +34,14 @@
         display: flex;
         gap: 16px;
         padding: 20px;
-        background: var(--bg-card);
+        background: linear-gradient(135deg, #ffffff, #f0fbff);
         border: 1px solid var(--border-subtle);
         border-radius: var(--radius-md);
         transition: var(--transition);
       }
       .solution-step:hover {
         border-color: var(--border);
-        background: var(--bg-card-hover);
+        background: linear-gradient(135deg, #ecfeff, #eef4ff);
       }
 
       .step-num {
@@ -59,13 +59,13 @@
       }
 
       .step-num--violet {
-        background: linear-gradient(135deg, var(--accent), #a855f7);
+        background: linear-gradient(135deg, #2563eb, #d946ef);
       }
       .step-num--cyan {
-        background: linear-gradient(135deg, var(--cyan), #0284c7);
+        background: linear-gradient(135deg, #06b6d4, #2563eb);
       }
       .step-num--green {
-        background: linear-gradient(135deg, #10b981, #059669);
+        background: linear-gradient(135deg, #10b981, #14b8a6);
       }
 
       .solution-step h5 {
@@ -82,22 +82,23 @@
       }
 
       .solution-card {
-        background: var(--bg-card);
+        background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
         border: 1px solid var(--border-subtle);
         border-radius: var(--radius-xl);
         overflow: hidden;
+        box-shadow: var(--shadow-card);
       }
 
       .solution-card-header {
         padding: 32px 32px 24px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+        border-bottom: 1px solid rgba(37, 99, 235, 0.12);
       }
 
       .solution-card-header h4 {
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #9898b0;
+        color: var(--accent-mid);
         margin-bottom: 16px;
       }
 
@@ -113,7 +114,8 @@
         align-items: center;
         gap: 12px;
         padding: 12px;
-        background: #f3f1ed;
+        background: linear-gradient(135deg, #f8fbff, #eefbff);
+        border: 1px solid rgba(37, 99, 235, 0.08);
         border-radius: var(--radius-sm);
       }
 
@@ -136,7 +138,7 @@
       }
       .included-row p {
         font-size: 0.78rem;
-        color: #9898b0;
+        color: var(--text-muted);
       }
 
       .solution-cta {
@@ -152,11 +154,12 @@
       }
 
       .stat-card {
-        background: var(--bg-card);
+        background: linear-gradient(135deg, #ffffff, #f5fbff);
         border: 1px solid var(--border-subtle);
         border-radius: var(--radius-md);
         padding: 24px;
         text-align: center;
+        box-shadow: 0 12px 28px rgba(37, 99, 235, 0.08);
       }
 
       .stat-card .stat-number {
@@ -211,7 +214,7 @@
               <div class="nav__dropdown">
                 <a href="fudo.html" class="nav__dropdown-link">FUDO</a>
                 <a href="repos.html" class="nav__dropdown-link">RePOS</a>
-                <a href="rateus.html" class="nav__dropdown-link">RateUS</a>
+                <!-- <a href="rateus.html" class="nav__dropdown-link">RateUS</a> -->
                 <a href="finx.html" class="nav__dropdown-link">FinX</a>
               </div>
             </li>
@@ -245,7 +248,7 @@
       <div class="nav__mobile-products">
         <a href="fudo.html" class="nav__link">FUDO</a>
         <a href="repos.html" class="nav__link">RePOS</a>
-        <a href="rateus.html" class="nav__link">RateUS</a>
+        <!-- <a href="rateus.html" class="nav__link">RateUS</a> -->
         <a href="finx.html" class="nav__link">FinX</a>
       </div>
       <a href="solutions.html" class="nav__link">Solutions</a>
@@ -277,7 +280,7 @@
             🍽 Restaurant
           </button>
           <button class="tab-btn" data-tab="retail">🛒 Retail</button>
-          <button class="tab-btn" data-tab="accounting">💼 Accounting</button>
+         <!-- <button class="tab-btn" data-tab="accounting">💼 Accounting</button> -->
         </div>
 
         <!-- ── RESTAURANT SOLUTION ────────────────────────────────── -->
@@ -297,7 +300,7 @@
                   <div>
                     <h5>Seamless Order Management</h5>
                     <p>
-                      Waiters take orders on tablet or POS terminal — instantly
+                      Waiters take orders on tablet or POS terminal instantly
                       sent to the kitchen display. No paper, no confusion.
                     </p>
                   </div>
@@ -325,7 +328,7 @@
                     <h5>Collect Customer Feedback</h5>
                     <p>
                       RateUS integration lets guests leave instant feedback via
-                      QR code — right after their meal.
+                      QR code right after their meal.
                     </p>
                   </div>
                 </div>
@@ -334,7 +337,7 @@
               <ul class="feature-list">
                 <li>Menu builder with modifiers and combo sets</li>
                 <li>Reservation and waiting list management</li>
-                <li>Daily revenue and item-level reports</li>
+                <li>Daily revenue and item level reports</li>
                 <li>Peak hours analysis and staff performance</li>
                 <li>Integration with delivery platforms</li>
               </ul>
@@ -366,7 +369,7 @@
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #ff8c00, #ffb347);
+                        background: linear-gradient(135deg, #f97316, #fbbf24);
                         color: #fff;
                       "
                     >
@@ -380,11 +383,11 @@
                       >Core</span
                     >
                   </div>
-                  <div class="included-row">
+                  <!--<div class="included-row">
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #f59e0b, #d97706);
+                        background: linear-gradient(135deg, #d946ef, #f97316);
                         color: #fff;
                       "
                     >
@@ -397,12 +400,12 @@
                     <span class="badge badge--amber" style="margin-left: auto"
                       >Add-on</span
                     >
-                  </div>
+                  </div> -->
                   <div class="included-row">
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #10b981, #059669);
+                        background: linear-gradient(135deg, #10b981, #14b8a6);
                         color: #fff;
                       "
                     >
@@ -424,7 +427,7 @@
                     style="
                       width: 100%;
                       justify-content: center;
-                      background: linear-gradient(135deg, #ff8c00, #ffb347);
+                      background: #2563eb;
                       color: #fff;
                     "
                     >Book a Restaurant Demo</a
@@ -454,7 +457,7 @@
               >
               <h3>Smarter Retail Starts Here</h3>
               <p>
-                Whether you manage a single shop or a multi-branch retail chain,
+                Whether you manage a single shop or a multi branch retail chain,
                 RePOS gives you realtime visibility across every store, product,
                 and customer interaction.
               </p>
@@ -473,7 +476,7 @@
                   <div>
                     <h5>Lightning-Fast Checkout</h5>
                     <p>
-                      Barcode scanning, quick-search, and one-touch billing make
+                      Barcode scanning, quick-search, and one touch billing make
                       every transaction smooth and fast.
                     </p>
                   </div>
@@ -533,7 +536,7 @@
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #06b6d4, #0891b2);
+                        background: linear-gradient(135deg, #06b6d4, #2563eb);
                         color: #fff;
                       "
                     >
@@ -547,11 +550,11 @@
                       >Core</span
                     >
                   </div>
-                  <div class="included-row">
+                  <!--<div class="included-row">
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #f59e0b, #d97706);
+                        background: linear-gradient(135deg, #d946ef, #f97316);
                         color: #fff;
                       "
                     >
@@ -564,12 +567,13 @@
                     <span class="badge badge--amber" style="margin-left: auto"
                       >Add-on</span
                     >
-                  </div>
+                  </div> -->
+
                   <div class="included-row">
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #10b981, #059669);
+                        background: linear-gradient(135deg, #10b981, #14b8a6);
                         color: #fff;
                       "
                     >
@@ -591,7 +595,7 @@
                     style="
                       width: 100%;
                       justify-content: center;
-                      background: linear-gradient(135deg, #06b6d4, #0891b2);
+                      background: #2563eb;
                     "
                     >Book a Retail Demo</a
                   >
@@ -612,15 +616,15 @@
         </div>
 
         <!-- ── ACCOUNTING SOLUTION ────────────────────────────────── -->
-        <div class="tab-panel" id="accounting">
+        <!--<div class="tab-panel" id="accounting">
           <div class="solution-layout">
             <div class="solution-info reveal">
               <span
                 class="section-label"
                 style="
-                  color: #34d399;
-                  background: rgba(16, 185, 129, 0.08);
-                  border-color: rgba(16, 185, 129, 0.2);
+                  color: #047857;
+                  background: rgba(16, 185, 129, 0.12);
+                  border-color: rgba(16, 185, 129, 0.28);
                 "
                 >For Finance Teams</span
               >
@@ -647,7 +651,7 @@
                     <h5>Expense Tracking</h5>
                     <p>
                       Capture receipts, categorise expenses, and track spending
-                      against budgets — in real time.
+                      against budgets in real time.
                     </p>
                   </div>
                 </div>
@@ -706,7 +710,7 @@
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #10b981, #059669);
+                        background: linear-gradient(135deg, #10b981, #14b8a6);
                         color: #fff;
                       "
                     >
@@ -724,7 +728,7 @@
                     <div
                       class="included-icon"
                       style="
-                        background: linear-gradient(135deg, #ff8c00, #ffb347);
+                        background: linear-gradient(135deg, #f97316, #fbbf24);
                         color: #fff;
                       "
                     >
@@ -746,7 +750,7 @@
                     style="
                       width: 100%;
                       justify-content: center;
-                      background: linear-gradient(135deg, #10b981, #059669);
+                      background: #2563eb;
                     "
                     >Book an Accounting Demo</a
                   >
@@ -765,17 +769,20 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </section>
 
     <!-- CTA -->
-    <section class="cta-section" style="background: #f3f1ed">
+    <section
+      class="cta-section"
+      style="background: linear-gradient(135deg, #e0f2fe, #fef3c7, #fae8ff)"
+    >
       <div class="cta-bg"><div class="cta-bg__orb1"></div></div>
       <div class="container">
         <div class="cta-inner reveal">
           <h2>Find Your Perfect Solution</h2>
           <p>
-            Talk to a Magnex specialist — we'll map the right products to your
+            Talk to a Magnex specialist We'll map the right products to your
             exact business needs.
           </p>
           <div class="btn-group" style="justify-content: center">
@@ -825,6 +832,11 @@
               >sales@magnexsolutions.com</a
             >
             <a href="tel:+94 11 232 5233">+94 11 232 5233</a>
+            <a
+              href="https://www.linkedin.com/company/magnex-solutions/?originalSubdomain=lk"
+              >LinkedIn</a
+            >
+            <a href="https://www.facebook.com/magnexsolutions/">Facebook</a>
           </div>
         </div>
         <div class="footer__bottom">

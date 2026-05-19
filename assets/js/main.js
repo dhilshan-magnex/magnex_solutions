@@ -5,7 +5,6 @@
   const nav = document.querySelector(".nav");
   const hamburger = document.querySelector(".nav__hamburger");
   const mobileMenu = document.querySelector(".nav__mobile");
-
   // Scrolled class
   function handleNavScroll() {
     if (!nav) return;
