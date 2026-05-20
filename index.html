@@ -27,6 +27,33 @@
         z-index: 0;
       }
 
+      .hero__bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("assets/images/pos fudo.jpg");
+        background-size: cover;
+        background-position: center; 
+        z-index: 0;
+      }
+
+      .hero__bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0.705) 0%,
+          rgba(255, 255, 255, 0.705) 50%,
+          rgba(255, 255, 255, 0.705) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero__bg > * {
+        z-index: 2;
+      }
+
       .hero__orb1 {
         position: absolute;
         top: 10%;
@@ -153,7 +180,8 @@
 
       .hero__stat p {
         font-size: 0.82rem;
-        color: var(--text-muted);
+        font-weight: 300;
+        color: #5c5c73;
         margin: 0;
       }
 
@@ -569,7 +597,7 @@
             <span class="gradient-text">Restaurants &amp; Retail</span>
           </h1>
 
-          <p>
+          <p style="font-weight: 500;">
             Magnex Solutions builds intelligent POS systems and business
             management software designed for restaurants and retail businesses
             right here in Sri Lanka.
@@ -587,19 +615,9 @@
           <div class="hero__stats">
             <div class="hero__stat">
               <div class="hero__stat-number">
-                <span data-counter data-target="50" data-suffix="+">50+</span>
+                <span data-counter data-target="30" data-suffix="+">30+</span>
               </div>
               <p>Businesses Served</p>
-            </div>
-            <div
-              class="hero__stat-divider"
-              style="background: rgba(0, 0, 0, 0.1)"
-            ></div>
-            <div class="hero__stat">
-              <div class="hero__stat-number">
-                <span data-counter data-target="4" data-suffix="">4</span>
-              </div>
-              <p>Flagship Products</p>
             </div>
             <div
               class="hero__stat-divider"
@@ -691,7 +709,7 @@
             >
           </div>
 
-          <!-- RateUS -->
+          <!-- RateUS
           <div class="card product-card reveal">
             <div class="product-card__header">
               <div class="product-logo product-logo--rateus">R★</div>
@@ -717,7 +735,7 @@
             >
           </div>
 
-          <!-- FinX -->
+           FinX 
           <div class="card product-card reveal">
             <div class="product-card__header">
               <div class="product-logo product-logo--finx">FX</div>
@@ -740,7 +758,7 @@
             <a href="finx.html" class="btn btn-secondary btn-sm"
               >Learn More →</a
             >
-          </div>
+          </div> -->
         </div>
     </section>
 

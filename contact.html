@@ -63,27 +63,11 @@
         border-radius: var(--radius-sm);
         padding: 10px 16px;
         font-size: 0.85rem;
-        color: var(--accent-light);
+        color: black;
         margin-bottom: 32px;
       }
 
       /* Map placeholder */
-      .map-placeholder {
-        background: var(--bg-card);
-        border: 1px solid var(--border-subtle);
-        border-radius: var(--radius-xl);
-        height: 220px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 12px;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        margin-top: 32px;
-        position: relative;
-        overflow: hidden;
-      }
 
       .map-placeholder::before {
         content: "";
@@ -329,20 +313,24 @@
               </div>
             </div>
 
-            <div class="map-placeholder">
-              <div class="map-pin">📍</div>
-              <div class="map-label">
-                <strong>Colombo 13, Sri Lanka</strong><br />
-                176 Wasala Rd
-              </div>
+            <div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.4840871645556!2d79.86401587581798!3d6.952082018032855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae258f07e65fb65%3A0xb09a2fdefc2e7284!2sMagnex%20Solutions%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1779263142323!5m2!1sen!2slk"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
           <!-- RIGHT FORM -->
           <div class="card contact-form-card reveal">
             <div class="demo-badge">
-              <span>🚀</span>
-              Book a free 30-minute demo — no commitment required
+              <span></span>
+              Book a free 30-minute demo no commitment required
             </div>
             <h3>Send Us a Message</h3>
             <p>
@@ -395,10 +383,8 @@
                   <select id="topic" name="topic">
                     <option value="">Select a topic…</option>
                     <option value="demo">Book a Product Demo</option>
-                    <option value="fudo">FUDO — Restaurant POS</option>
-                    <option value="repos">RePOS — Retail POS</option>
-                    <option value="rateus">RateUS — Customer Feedback</option>
-                    <option value="finx">FinX — Finance & Accounting</option>
+                    <option value="fudo">FUDO - Restaurant POS</option>
+                    <option value="repos">RePOS - Retail POS</option>
                     <option value="pricing">Pricing Enquiry</option>
                     <option value="support">Technical Support</option>
                     <option value="other">General Enquiry</option>
@@ -482,7 +468,7 @@
               Quick answers via WhatsApp — we respond fast.
             </p>
             <a
-              href="https://wa.me/94771234567"
+              href="https://wa.me/+94779784122"
               class="whatsapp-btn"
               style="padding: 9px 20px; font-size: 0.85rem"
               target="_blank"
