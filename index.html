@@ -194,7 +194,7 @@
       /* Products Section */
       .products-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
       }
 
@@ -263,7 +263,7 @@
 
       .features-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2px;
         background: rgba(0, 0, 0, 0.07);
         border-radius: var(--radius-xl);
@@ -291,7 +291,7 @@
       /* Why Choose Us */
       .why-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 64px;
         align-items: center;
       }
@@ -488,7 +488,26 @@
         animation: float 1.5s infinite;
       }
 
+      @media (max-width: 1024px) {
+        .features-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .why-grid {
+          gap: 44px;
+        }
+      }
+
       @media (max-width: 768px) {
+        .hero {
+          min-height: auto;
+          padding: calc(var(--nav-height) + 48px) 0 64px;
+        }
+        .hero h1 br {
+          display: none;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
         .products-grid {
           grid-template-columns: 1fr;
         }
@@ -504,9 +523,47 @@
         }
         .hero__stats {
           gap: 24px;
+          margin-top: 44px;
+          padding-top: 36px;
         }
         .hero__stat-number {
           font-size: 1.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero__eyebrow {
+          margin-bottom: 24px;
+          padding: 7px 12px;
+          font-size: 0.68rem;
+          letter-spacing: 0.08em;
+        }
+        .hero__stats {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .hero__stat-divider {
+          display: none;
+        }
+        .product-card {
+          padding: 24px;
+        }
+        .product-card__header {
+          align-items: flex-start;
+        }
+        .feature-item {
+          padding: 28px 24px;
+        }
+        .why-visual-card {
+          padding: 24px;
+        }
+        .metric-row {
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .metric-value {
+          text-align: right;
         }
       }
     </style>
@@ -947,7 +1004,7 @@
                   class="metric-value"
                   style="color: #12121e"
                   style="color: #67e8f9"
-                  >LKR 148,250</span
+                  >LKR 140,000</span
                 >
               </div>
               <div class="metric-bar">

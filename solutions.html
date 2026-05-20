@@ -8,7 +8,7 @@
     <style>
       .solution-layout {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 64px;
         align-items: start;
       }
@@ -148,7 +148,7 @@
 
       .stats-row {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
         margin-top: 40px;
       }
@@ -183,6 +183,21 @@
       @media (max-width: 768px) {
         .stats-row {
           grid-template-columns: 1fr;
+        }
+        .solution-card-header,
+        .included-products,
+        .solution-cta {
+          padding-inline: 24px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .solution-step,
+        .included-row {
+          align-items: flex-start;
+        }
+        .solution-card-header {
+          padding-top: 24px;
         }
       }
     </style>
