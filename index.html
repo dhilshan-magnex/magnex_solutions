@@ -261,6 +261,18 @@
         margin-bottom: 24px;
       }
 
+      .product-card__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .product-card__login {
+        margin-left: auto;
+      }
+
       /* Features Section */
       .features-section {
         background: #f3f1ed;
@@ -557,6 +569,17 @@
         .product-card__header {
           align-items: flex-start;
         }
+        .product-card__actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+        .product-card__actions .btn {
+          justify-content: center;
+          width: 100%;
+        }
+        .product-card__login {
+          margin-left: 0;
+        }
         .feature-item {
           padding: 28px 24px;
         }
@@ -609,7 +632,7 @@
 
           <div class="nav__actions">
             <a href="contact.html" class="btn btn-secondary btn-sm"
-              >Contact Us</a
+              >Book Demo</a
             >
             <!--<a href="contact.html#demo" class="btn btn-primary btn-sm"
               >Book Demo</a
@@ -713,9 +736,9 @@
       <div class="container">
         <div class="text-center mb-5">
           <span class="section-label">Our Products</span>
-          <h2>Four Powerful Products.<br />One Unified Vision.</h2>
+          <h2>Two Powerful Products.<br />One Unified Vision.</h2>
           <p style="max-width: 560px; margin: 16px auto 0">
-            Each product in our suite is purpose-built to solve real problems
+            Each product in our suite is purpose built to solve real problems
             for real businesses across Sri Lanka.
           </p>
         </div>
@@ -748,9 +771,17 @@
               <span class="badge badge--cyan">Online Reporting App</span>
               <span class="badge badge--cyan">Inventory Management System</span>
             </div>
-            <a href="fudo.html" class="btn btn-secondary btn-sm"
-              >Learn More →</a
-            >
+            <div class="product-card__actions">
+              <a href="fudo.html" class="btn btn-secondary btn-sm"
+                >Learn More</a
+              >
+
+              <a
+                href="https://fudo.magnexsolutions.com/login"
+                class="btn btn-secondary btn-sm product-card__login"
+                >Login to FUDO</a
+              >
+            </div>
           </div>
 
           <!-- RePOS -->
@@ -780,9 +811,16 @@
               <span class="badge badge--cyan">Online Dashboard App</span>
               <span class="badge badge--cyan">Inventory Management System</span>
             </div>
-            <a href="repos.html" class="btn btn-secondary btn-sm"
-              >Learn More →</a
-            >
+            <div class="product-card__actions">
+              <a href="repos.html" class="btn btn-secondary btn-sm"
+                >Learn More</a
+              >
+              <a
+                href="https://repos.magnexsolutions.com"
+                class="btn btn-secondary btn-sm product-card__login"
+                >Login to RePOS</a
+              >
+            </div>
           </div>
 
           <!-- RateUS
@@ -845,7 +883,7 @@
           <span class="section-label">Core Capabilities</span>
           <h2>Everything Your Business Needs</h2>
           <p style="max-width: 520px; margin: 16px auto 0">
-            Built-in tools that work together to give you complete control over
+            Built in tools that work together to give you complete control over
             your operations.
           </p>
         </div>
@@ -853,7 +891,7 @@
         <div class="features-grid reveal">
           <div class="feature-item">
             <div class="card__icon card__icon--violet">📊</div>
-            <h4>Real-Time Analytics</h4>
+            <h4>Real Time Analytics</h4>
             <p>
               Live dashboards showing revenue, orders, and inventory levels
               making data driven decisions effortless.
