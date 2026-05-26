@@ -357,7 +357,13 @@
               you within 2 business hours.
             </p>
 
-            <form id="contactForm" novalidate>
+            <form
+              id="contactForm"
+              action="contact-submit.php"
+              method="post"
+              data-endpoint="contact-submit.php"
+              novalidate
+            >
               <div class="form-grid">
                 <div class="form-group">
                   <label for="name">Full Name *</label>
@@ -366,6 +372,8 @@
                     id="name"
                     name="name"
                     placeholder="e.g. xyz"
+                    autocomplete="name"
+                    required
                   />
                   <span class="form-error">Please enter your full name.</span>
                 </div>
@@ -376,6 +384,8 @@
                     id="email"
                     name="email"
                     placeholder="you@company.com"
+                    autocomplete="email"
+                    required
                   />
                   <span class="form-error">Please enter a valid email.</span>
                 </div>
@@ -386,6 +396,7 @@
                     id="phone"
                     name="phone"
                     placeholder="+94 77 123 4567"
+                    autocomplete="tel"
                   />
                 </div>
                 <div class="form-group">
@@ -395,6 +406,7 @@
                     id="business"
                     name="business"
                     placeholder="Your Restaurant / Shop"
+                    autocomplete="organization"
                   />
                 </div>
                 <div class="form-group full">
@@ -415,6 +427,7 @@
                     id="message"
                     name="message"
                     placeholder="Tell us a bit about your business and what you're looking to achieve…"
+                    required
                   ></textarea>
                   <span class="form-error"
                     >Please enter a message (min 10 characters).</span
@@ -445,12 +458,12 @@
               </p>
             </form>
 
-            <div class="form-success" id="formSuccess">
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
               <div style="font-size: 2rem; margin-bottom: 12px">🎉</div>
-              <strong>Message sent successfully!</strong><br />
-              A Magnex specialist will reach out within 2 business hours.<br />
+              <strong id="formSuccessTitle">Message sent successfully!</strong><br />
+              <span id="formSuccessMessage">A Magnex specialist will reach out within 2 business hours.</span><br />
               <span style="color: var(--text-muted)"
-                >Check your email for a confirmation.</span
+                id="formSuccessNote">Thank you for contacting Magnex Solutions.</span
               >
             </div>
           </div>

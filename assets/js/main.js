@@ -1,7 +1,6 @@
-(function () {
+﻿(function () {
   "use strict";
 
-  /* ── NAVIGATION ──────────────────────────────────────────── */
   const nav = document.querySelector(".nav");
   const hamburger = document.querySelector(".nav__hamburger");
   const mobileMenu = document.querySelector(".nav__mobile");
@@ -45,7 +44,6 @@
     }
   });
 
-  /* ── SCROLL REVEAL ───────────────────────────────────────── */
   const reveals = document.querySelectorAll(".reveal");
 
   if (reveals.length && "IntersectionObserver" in window) {
@@ -85,7 +83,6 @@
     reveals.forEach((el) => el.classList.add("revealed"));
   }
 
-  /* ── SMOOTH SCROLL for anchor links ─────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const target = document.querySelector(anchor.getAttribute("href"));
@@ -104,7 +101,6 @@
     });
   });
 
-  /* ── TABS ────────────────────────────────────────────────── */
   const tabBtns = document.querySelectorAll(".tab-btn");
   const tabPanels = document.querySelectorAll(".tab-panel");
 
@@ -119,7 +115,6 @@
     });
   });
 
-  /* ── CONTACT FORM VALIDATION ─────────────────────────────── */
   const contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
@@ -158,17 +153,99 @@
       }
 
       if (valid) {
-        // Simulate success
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        submitBtn.textContent = "Sending…";
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Sending...";
         submitBtn.disabled = true;
-        setTimeout(() => {
-          contactForm.style.display = "none";
-          const success = document.getElementById("formSuccess");
-          if (success) success.classList.add("visible");
-        }, 1200);
+
+        const formData = new FormData(contactForm);
+        const endpoint = contactForm.dataset.endpoint;
+
+        if (endpoint && window.location.protocol !== "file:") {
+          fetch(endpoint, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          })
+            .then((response) => parseJsonResponse(response))
+            .then(({ ok, data }) => {
+              if (!ok || !data.success) {
+                throw new Error(data.message || "Unable to send message.");
+              }
+
+              contactForm.reset();
+              showSuccess(
+                "Message sent successfully!",
+                "A Magnex specialist will reach out within 2 business hours.",
+                "Thank you for contacting Magnex Solutions.",
+              );
+            })
+            .catch((error) => {
+              showSuccess(
+                "Message could not be sent.",
+                error.message ||
+                  "Please try again in a moment or contact Magnex Solutions directly.",
+                "The contact form needs to be uploaded to a PHP-enabled hosting server to send email.",
+                true,
+              );
+            })
+            .finally(() => {
+              submitBtn.textContent = originalText;
+              submitBtn.disabled = false;
+            });
+        } else {
+          showSuccess(
+            "Server required.",
+            "This form cannot send email when opened directly from your computer.",
+            "Upload the site to PHP-enabled hosting and submit it through the website URL.",
+            true,
+          );
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
       }
     });
+
+    function parseJsonResponse(response) {
+      return response.text().then((text) => {
+        if (!text.trim()) {
+          throw new Error(
+            "The server returned an empty response. Please check that PHP mail is enabled on your hosting server.",
+          );
+        }
+
+        try {
+          return {
+            ok: response.ok,
+            data: JSON.parse(text),
+          };
+        } catch (error) {
+          throw new Error(
+            "The server did not return a valid contact form response. Please make sure contact-submit.php is running as PHP.",
+          );
+        }
+      });
+    }
+
+    function showSuccess(title, message, note, isError) {
+      const success = document.getElementById("formSuccess");
+      if (!success) return;
+
+      const titleEl = document.getElementById("formSuccessTitle");
+      const messageEl = document.getElementById("formSuccessMessage");
+      const noteEl = document.getElementById("formSuccessNote");
+
+      if (titleEl) titleEl.textContent = title;
+      if (messageEl) messageEl.textContent = message;
+      if (noteEl) noteEl.textContent = note;
+      success.classList.toggle("error", Boolean(isError));
+      success.classList.add("visible");
+    }
+
+    function getFieldValue(id) {
+      const field = contactForm.querySelector(`#${id}`);
+      return field ? field.value.trim() : "";
+    }
 
     function showError(field, message) {
       const group = field.closest(".form-group");
@@ -181,14 +258,12 @@
     }
   }
 
-  /* ── HERO FLOATING ANIMATION ──────────────────────────────── */
   const floatEls = document.querySelectorAll(".float-anim");
   floatEls.forEach((el, i) => {
     el.style.animationDelay = `${i * 0.6}s`;
     el.style.animation = `float ${3 + i * 0.5}s ease-in-out infinite`;
   });
 
-  /* ── COUNTER ANIMATION ────────────────────────────────────── */
   function animateCounter(el) {
     const target = parseInt(el.dataset.target);
     const duration = 1800;

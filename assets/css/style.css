@@ -724,6 +724,12 @@ p { color: var(--text-secondary); }
 }
 .form-success.visible { display: block; }
 
+.form-success.error {
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.3);
+  color: #ef4444;
+}
+
 /* ── SCROLL REVEAL ───────────────────────────────────────────── */
 .reveal {
   opacity: 0;
