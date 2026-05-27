@@ -44,6 +44,12 @@
     }
   });
 
+  document
+    .querySelectorAll(
+      ".features-grid .feature-item, .text-center.mb-5, .why-point",
+    )
+    .forEach((el) => el.classList.add("reveal"));
+
   const reveals = document.querySelectorAll(".reveal");
 
   if (reveals.length && "IntersectionObserver" in window) {
@@ -64,17 +70,21 @@
     );
 
     reveals.forEach((el, i) => {
-      // Auto-stagger siblings in grids
+      // Auto-stagger siblings in repeated layouts.
       const parent = el.parentElement;
       if (
         parent &&
         (parent.classList.contains("grid-2") ||
           parent.classList.contains("grid-3") ||
-          parent.classList.contains("grid-4"))
+          parent.classList.contains("grid-4") ||
+          parent.classList.contains("products-grid") ||
+          parent.classList.contains("features-grid") ||
+          parent.classList.contains("testimonials-grid") ||
+          parent.classList.contains("why-points"))
       ) {
         const siblings = Array.from(parent.children);
         const index = siblings.indexOf(el);
-        el.dataset.delay = index * 80;
+        el.style.setProperty("--reveal-delay", `${Math.min(index * 80, 360)}ms`);
       }
       observer.observe(el);
     });

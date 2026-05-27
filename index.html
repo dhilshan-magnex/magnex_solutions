@@ -62,6 +62,7 @@
         height: 420px;
         background: radial-gradient(circle, #e0f8ff 0%, transparent 70%);
         filter: blur(60px);
+        animation: heroDrift 13s ease-in-out infinite;
       }
 
       .hero__orb2 {
@@ -72,6 +73,7 @@
         height: 320px;
         background: radial-gradient(circle, #e0f8ff, transparent 70%);
         filter: blur(60px);
+        animation: heroDrift 16s 1s ease-in-out infinite reverse;
       }
 
       .hero__orb3 {
@@ -82,6 +84,7 @@
         height: 250px;
         background: radial-gradient(circle, #e0f8ff, transparent 70%);
         filter: blur(50px);
+        animation: heroDriftSmall 12s 0.5s ease-in-out infinite;
       }
 
       /* Grid overlay */
@@ -97,6 +100,7 @@
           black 0%,
           transparent 100%
         );
+        animation: gridPan 22s linear infinite;
       }
 
       .hero__inner {
@@ -295,6 +299,7 @@
 
       .feature-item:hover {
         background: var(--bg-card);
+        transform: translateY(-4px);
       }
 
       .feature-item .card__icon {
@@ -417,6 +422,21 @@
         height: 100%;
         border-radius: 2px;
         background: #e0a449;
+      }
+
+      @keyframes heroDrift {
+        0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+        50% { transform: translate3d(22px, -18px, 0) scale(1.06); }
+      }
+
+      @keyframes heroDriftSmall {
+        0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+        50% { transform: translate3d(-18px, 16px, 0) scale(1.08); }
+      }
+
+      @keyframes gridPan {
+        from { background-position: 0 0; }
+        to { background-position: 60px 60px; }
       }
 
       /* Testimonials */
