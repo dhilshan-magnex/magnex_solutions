@@ -84,7 +84,10 @@
       ) {
         const siblings = Array.from(parent.children);
         const index = siblings.indexOf(el);
-        el.style.setProperty("--reveal-delay", `${Math.min(index * 80, 360)}ms`);
+        el.style.setProperty(
+          "--reveal-delay",
+          `${Math.min(index * 80, 360)}ms`,
+        );
       }
       observer.observe(el);
     });
@@ -123,6 +126,60 @@
       const panel = document.getElementById(target);
       if (panel) panel.classList.add("active");
     });
+  });
+
+  document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector("[data-carousel-track]");
+    const slides = Array.from(
+      carousel.querySelectorAll("[data-carousel-slide]"),
+    );
+    const dots = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+    let current = 0;
+    let timer;
+
+    if (!track || slides.length < 2) return;
+
+    function showSlide(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      slides.forEach((slide, i) =>
+        slide.classList.toggle("active", i === current),
+      );
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === current));
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      timer = setInterval(() => showSlide(current + 1), 8000);
+    }
+
+    function stopAutoPlay() {
+      if (timer) clearInterval(timer);
+    }
+
+    prevBtn?.addEventListener("click", () => {
+      showSlide(current - 1);
+      startAutoPlay();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      showSlide(current + 1);
+      startAutoPlay();
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        showSlide(i);
+        startAutoPlay();
+      });
+    });
+
+    carousel.addEventListener("mouseenter", stopAutoPlay);
+    carousel.addEventListener("mouseleave", startAutoPlay);
+    showSlide(0);
+    startAutoPlay();
   });
 
   const contactForm = document.getElementById("contactForm");
